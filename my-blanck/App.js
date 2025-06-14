@@ -1,42 +1,42 @@
-/*zona 1: de importaciones*/
+// Zona 1: Importaciones
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button} from 'react-native';
-import React,{useState} from 'react';
+import {StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
 
-const Texto=()=>{
-  const[contenido,setContenido]=useState('Hola Mundo RNative');
-  const actualizaTexto=()=>{setContenido('Estado actualizado del Text')}
-  return(
-  <Text onPress={actualizaTexto}>{contenido}</Text>
-  )
-};
-const Boton=()=>{
-  const [contenido,setContenido]=useState('Chinito no quelel tlabajal')
-  const actualizarButton=()=>{setContenido('Tlabaja ya actualizado!!')}
-  return(
-    <Button title={contenido} onPress={actualizarButton} />
-  )
-};
-/*zona 2: Main*/
+const Texto = ({style}) => {
+  const [contenido, setContenido] = useState('Hola Mundo RNative');
+  const actualizatexto = () => setContenido('Estado actualizado del texto');
+  return (
+    <Text style={[styles.text, style]} onPress={actualizatexto}> {contenido} </Text>
+  );
+}
+
+// Zona 2: main
 export default function App() {
   return (
     <View style={styles.container}>
-      <Button title="Tlabaja!!"></Button>
-      <Boton></Boton>
-      <Texto></Texto>
-      <Texto></Texto>
-      <Texto></Texto>
+      <Texto style={styles.red}> </Texto>
+      <Texto style={styles.blue}> </Texto>
+      <Texto style={styles.green}> </Texto>
       <StatusBar style="auto" />
     </View>
   );
-};
+}
 
-/*zona 3: Estetica del screen*/
+// Zona 3: Estética del screen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+    backgroundColor: '#8BA98B',
+    alignItems: 'baseline',
     justifyContent: 'center',
+    flexDirection: 'row-reverse',
   },
+  text:{
+    color: 'white',
+    fontSize: 27,
+  },
+  red:{backgroundColor: 'red'},
+  blue:{backgroundColor: 'blue'},
+  green:{backgroundColor: 'green'},
 });
