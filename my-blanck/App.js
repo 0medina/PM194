@@ -1,45 +1,52 @@
-// Zona 1: Importaciones
+/* ZONA 1: IMPORTACIONES */
 import { StatusBar } from 'expo-status-bar';
-import {StyleSheet, Text, View, Button } from 'react-native';
-import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button, Switch } from 'react-native';
+import React, {useState} from 'react';
 
-const Texto = ({style}) => {
-  const [contenido, setContenido] = useState("Hola Mundo RNative"); 
-  const actualizaTexto = () => {setContenido('Hola como estas?')}
+const Interruptor = () => {
+  const[isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   return (
-    <View Style = {{margin: 10}}>
-      <Text Style = {[styles.text, style]}>{contenido}</Text>
-      <Button title = "Actualizar Texto" onPress = {actualizaTexto} color = "purple"/>
+    <View styles = {styles.container}>
+      <Text>
+        {isEnabled ? 'ACTIVADO': 'DESACTIVADO'}
+      </Text>
+      <Switch
+        trakColor = {{false: '#767577', true: '#81b0ff'}}
+        thumbColor = {isEnabled ? '#f5dd4b' : '#f4f3f4'}
+        onValueChange={toggleSwitch}
+        value={isEnabled}
+      />
     </View>
   )
-};
+}
 
-// Zona 2: main
+
+
+
+/* ZONA2: MAIN */
 export default function App() {
   return (
     <View style={styles.container}>
-      <Texto style={styles.red}> </Texto>
-      <Texto style={styles.blue}> </Texto>
-      <Texto style={styles.green}> </Texto>
-      <StatusBar style="auto" />
+      < Interruptor />
     </View>
   );
 }
 
-// Zona 3: Estética del screen
+/* ZONA 3: ESTILOS */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8BA98B',
+    backgroundColor: '#fff',
     alignItems: 'baseline',
     justifyContent: 'center',
-    flexDirection: 'row-reverse',
+    flexDirection: 'row',
   },
   text:{
-    color: 'white',
+    color:'white',
     fontSize: 27,
   },
   red:{backgroundColor: 'red'},
   blue:{backgroundColor: 'blue'},
-  green:{backgroundColor: 'green'},
+  green:{backgroundColor: 'green'}
 });
