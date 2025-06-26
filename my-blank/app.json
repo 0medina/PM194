@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "my-blank",
+    "slug": "my-blank",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/naturaleza.jpg",            
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/naturaleza.jpg",            
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/naturaleza.jpg",  
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/naturaleza.jpg"         
+    }
+  }
+}
