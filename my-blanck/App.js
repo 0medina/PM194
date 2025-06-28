@@ -1,60 +1,167 @@
-import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { ImageBackground } from 'react-native';
+/* Zona 1: Importaciones */
 import * as SplashScreen from 'expo-splash-screen';
+import React, {useEffect, useState} from 'react';
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
 
-// 1. Configuramos el SplashScreen
 SplashScreen.preventAutoHideAsync();
 
-
+/* Zona 2: Main */
 export default function App() {
-  const [appReady, setAppReady] = useState(false);//appReady es un estado que indica si la app ya terminó su "carga"
-
-  useEffect(() => {
-    setTimeout(async () => {//espera y es asincrona para usar await
-      setAppReady(true);//cambia de estado
-      await SplashScreen.hideAsync();//quitar el splash despues de los 2 
-    }, 2000); 
-  }, []);
-
- 
   return (
-    <ImageBackground 
-      source={require('./assets/changito.png')} 
-      style={styles.background}
-      resizeMode="cover"
-    >
-      <View style={styles.container}>
-        <Text style={styles.title}>Mi App</Text>
-        <Text style={styles.subtitle}>
-          {appReady ? '¡Carga completa!' : 'Cargando...'}
-        </Text>
-      </View>
-    </ImageBackground>
-  );
+    <ScrollView contentContainerStyle = {styles.backgrouns} showsVerticalScrollIndicator={false} horizontal={true}>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+      <Text>HOLA MUNDO</Text>
+    </ScrollView>
+  )
 }
 
-// 4. Estilos simples
+/* Estilos */
 const styles = StyleSheet.create({
-  background: {
+  backgrouns: {
     flex: 1,
     width: '100%',
     height: '100%',
-  },
-  container: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
     justifyContent: 'center',
     alignItems: 'center',
+  }, 
+  overlay: {
+    flex: 1,
+    width: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 50,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
-  title: {
-    color: 'white',
-    fontSize: 32,
+  text: {
+    color: 'black',
+    fontSize: 20,
     fontWeight: 'bold',
-    marginBottom: 10,
+    textAlign: 'center',
   },
-  subtitle: {
-    color: 'white',
-    fontSize: 18,
-  }
 });
